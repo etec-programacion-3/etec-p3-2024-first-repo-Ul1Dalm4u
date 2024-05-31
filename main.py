@@ -6,10 +6,12 @@ app=Flask(__name__)
 def hola():
     return "hola mundo"
 
-
-
 @app.route("/chau")
 def goodbay():
     return "chau"
+
+@app.route("/saludo/<nombre>")
+def saludar(nombre):
+    return f"Hola {nombre}"
 
 app.run()
