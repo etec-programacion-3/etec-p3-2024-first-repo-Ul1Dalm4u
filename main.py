@@ -11,7 +11,11 @@ def goodbay():
     return "chau"
 
 @app.route("/saludo/<nombre>")
-def saludar(nombre):
+def saludo(nombre):
     return f"Hola {nombre}"
+
+@app.route("/saludo/<nombre>/<apellido>")
+def saludo2(nombre, apellido):
+    return f"Hola {nombre} {apellido}"
 
 app.run()
